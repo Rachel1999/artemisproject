@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Doneer</title>
+        <link rel = "icon" href = "../Img/Artemis_icon_Tabheader.png" type = "image/x-icon">
+        
+        <link rel="stylesheet" href="../css/Forms.css">
+        <link rel="stylesheet" href="../css/doneer.css">
+        <link rel="stylesheet" href="../css/General.css">
+
+        <script src="../scripts/doneer.js" defer></script>
+        <script src="../scripts/general.js" defer></script>
+
+    </head>
+    <body>
+        <nav>
+            <a href="../index.html">
+                <Img src="../Img/Artemis_icon_Tabheader.png">
+            </a>
+
+            <h1 id="PageTitle">
+                Home
+            </h1>
+
+            <ul id="NavMenu">
+                <li>
+                    <a href="../index.html">Home</a>
+                </li>
+                <li>
+                    <a href="OnzeDieren.html">Onze Dieren</a>
+                </li>
+                <li>
+                    <a href="Nieuws.html">Nieuws</a>
+                </li>
+                <li>
+                    <a href="Contact.html">Contact</a>
+                </li>
+                <li>
+                    <a class="doneer mobileDevice" href="Doneer.html">
+                        Doneer
+                    </a>
+                </li>
+            </ul>
+
+            <a class="doneer desktop" href="html/Doneer.html">
+                Doneer
+            </a>
+
+            <div id="HamburgerMenu">
+                <div class="barItem"></div>
+            </div>
+
+        </nav>
+        <div id="ClearFix"></div>
+        <main class="preMainDoneer"> 
+            
+            <form id="formDoneer">
+                <h1>
+                    Doneer Nu
+                </h1>
+                <h3>
+                    Bedrag
+                </h3>
+                <input type="number" name="Bedrag" required="required"></input>
+                <h3>
+                    Naam
+                </h3>
+                <input type="text" name="Naam" required="required"></input>
+                <h3>
+                    E-mail
+                </h3>
+                <input type="text" name="E-mail" required="required"></input>
+
+				<input type="button" onclick="doneerSubmit()" value="Doneer">
+            </form>
+
+            <div class="preItemDoneer">
+                <div id="GoalWrapper">
+                    <h1>
+                        Dank u wel voor uw donatie
+                    </h1>
+                    <div id="Progressbar">
+                        <div id="Progress">
+                            <div class="bar"></div>
+                            <p>
+                                315
+                            </p>
+                        </div>
+                        <div id="MainGoal">
+                            <div class="bar"></div>
+                            <p>
+                                500
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <section class="preItemDoneer">
+                <div id="TimesDonated">
+                    <p>
+                        Ontvangen Donaties
+                    </p>
+                    <div class="amount">
+                        <h2>
+                            5
+                        </h2>
+                    </div>
+                </div>
+
+                <ul id="Donators">
+                    <li>
+                        <Img src="../Img/Doneer/kisspng-dog-paw-bear-clip-art-dog-paw-clipart-5aaa1b82172204.5185983915210976020948.png" alt="Poot van een hond">
+                        <p>
+                            
+                        </p>
+                        <div class="donationAmount">
+                            <p>
+                                €15,-
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <Img src="../Img/Doneer/kisspng-dog-paw-bear-clip-art-dog-paw-clipart-5aaa1b82172204.5185983915210976020948.png" alt="Poot van een hond">
+                        <p>
+                            Aart Staartjes
+                        </p>
+                        <div class="donationAmount">
+                            <p>
+                                €25,-
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <Img src="../Img/Doneer/kisspng-dog-paw-bear-clip-art-dog-paw-clipart-5aaa1b82172204.5185983915210976020948.png" alt="Poot van een hond">
+                        <p>
+                            Mark Rutte
+                        </p>
+                        <div class="donationAmount">
+                            <p>
+                                €50,-
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <Img src="../Img/Doneer/kisspng-dog-paw-bear-clip-art-dog-paw-clipart-5aaa1b82172204.5185983915210976020948.png" alt="Poot van een hond">
+                        <p>
+                            Hugo de Jonge
+                        </p>
+                        <div class="donationAmount">
+                            <p>
+                                €75,-
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <Img src="../Img/Doneer/kisspng-dog-paw-bear-clip-art-dog-paw-clipart-5aaa1b82172204.5185983915210976020948.png" alt="Poot van een hond">
+                        <p>
+                            Jesse Klaver 
+                        </p>
+                        <div class="donationAmount">
+                            <p>
+                                €150,-
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+
+                <div id="GoBack">
+                    Terug naar donatie venster
+                </div>     
+            </section>
+
+        </main>
+    </body>
+</html>

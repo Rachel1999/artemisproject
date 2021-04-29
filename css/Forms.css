@@ -1,0 +1,27 @@
+form textarea {
+  resize: none;
+}
+form h3 {
+  text-align: center;
+  color: #5457a6;
+  font-weight: normal;
+}
+form input,
+form textarea {
+  height: 30px;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  border-radius: 15px;
+  border: 1px solid #acacac;
+  padding: 0 1em;
+  width: 12rem;
+  text-align: center;
+}
+input[type="submit"] {
+  font-size: 1.2em;
+  font-weight: 500;
+  width: 12em;
+  background-color: #eebb55;
+  color: white;
+  border: 1pt solid #acacac;
+}

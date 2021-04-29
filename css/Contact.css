@@ -1,0 +1,66 @@
+#mainContact {
+  height: 80vh;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.6) 100%), url("../Img/Pussy.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+#mainContact #formContact {
+  width: 500px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto auto;
+  gap: 1rem 5rem;
+}
+#mainContact #formContact #Question {
+  min-height: 16rem;
+  grid-column: 2;
+  padding: 1rem;
+}
+#mainContact #formContact #SubAndSend {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-row: 2;
+  grid-column: span 2;
+}
+#mainContact #formContact #SubAndSend #checkboxWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  flex-wrap: nowrap;
+}
+#mainContact #formContact #SubAndSend #checkboxWrapper input[type="checkbox"] {
+  width: 20px;
+}
+@media (max-width: 750px) and (orientation: landscape) {
+  #mainContact #formContact {
+    width: auto;
+    gap: 2rem;
+    display: flex;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  #mainContact #formContact #Questions {
+    padding: 0px;
+  }
+  #mainContact #formContact #SubAndSend {
+    justify-content: center;
+    align-content: center;
+  }
+}
+@media (max-width: 510px) {
+  #mainContact {
+    padding: 2rem 0;
+  }
+  #mainContact #formContact {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+}
