@@ -3,7 +3,7 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Helvetica";
-  overflow-x: hidden;
+  /* overflow-x: hidden;  disabled */
   text-decoration: none;
 }
 #PleuresEisenDieNiemandWiltLaatMijLekkerNesten .extendMe {
@@ -33,7 +33,8 @@ html,
 body {
   min-height: 100vh;
   scroll-behavior: smooth;
-  overflow-y: visible;
+  /* overflow-y: visible; disabled */
+  overflow-x: hidden; /* vervanging */
 }
 nav {
   position: fixed;
@@ -106,6 +107,11 @@ nav #PageTitle {
   color: #5457a6;
   font-size: 3em;
 }
+
+.current-page, nav ul li a:hover {
+  border-bottom: 4px solid #eebb55;
+}
+
 #ClearFix {
   margin-top: 8rem;
 }
