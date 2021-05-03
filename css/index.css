@@ -39,117 +39,97 @@
 #WelcomeWrapper #OntdekMeer p {
   margin-bottom: 1rem;
 }
-main {
-  display: grid;
-  grid-template-columns: repeat(1fr, 2);
-  min-height: 100vh;
-}
-main div {
-  display: flex;
-}
-main .overOns {
-  grid-column: 1/2;
-  flex-direction: column;
-  align-items: center;
-}
-main .overOns h1 {
-  text-align: center;
-  font-size: 4em;
-  margin: 1vw 0 2vw 0;
-  color: #5457a6;
-}
-main .overOns .Description {
-  padding: 0 3rem 0 3rem;
-}
-main .overOns .Description p {
-  line-height: 2rem;
-  padding: 0 0 0.75em 0;
-  font-size: 1.40rem;
-}
-main .overOns .Description .adopteer {
-  display: flex;
-  flex-direction: column;
-  height: 20rem;
-  align-items: center;
+
+.about-container {
+  width: 100%;
   height: auto;
-  justify-content: flex-start;
+  background-color: rgba(84, 87, 166, 0.03);
+  display: grid;
+  grid-template-columns: auto auto;
 }
-main .overOns .Description .adopteer a {
+
+.about-container .paragraph h2{
+  font-size: 27px;
+  color: #5457a6;
+  margin: 20px 0;
+}
+
+.about-container .paragraph {
+  padding: 20px 200px;
+  font-size: 18px;
+}
+
+.about-container img {
+  width: 100%;
+  min-width: 200px;
+  border-radius: 100%;
+}
+
+.about-container .image-holder {
+  padding: 20px 200px 60px 0;
+}
+
+.work-ethic {
+  background-color: #fff;
+}
+
+.work-ethic .image-holder{
+  padding: 20px 0 60px 200px;
+}
+
+.work-ethic .paragraph {
+  padding: 20px 200px;
+  font-size: 18px;
+}
+
+#adopt-link {
+  margin-top: 50px;
+}
+
+#adopt-link a{
   background-color: #5457a6;
   color: #FFF;
-  font-size: 2.5rem;
+  font-size: 18px;
   border-radius: 50px;
   box-shadow: 3px 3px 1px #CCC;
   padding: 1rem 5rem;
-  margin-top: 25px;
+  
 }
-main .slideShow {
-  grid-column: 2/3;
-  /* background-image: radial-gradient(rgba(255, 255, 152, 1) 30%,rgba(255, 255, 255, 1.0)70%); */
-}
-main .slideShow img {
-  width: 50vw;
-  height: 100vh;
-  -webkit-animation-duration: 5s;
-  animation-duration: 5s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-}
-@media (max-width: 1440px) {
-  main .slideShow {
-    justify-content: center;
-    align-items: center;
+
+
+@media (max-width: 1500px) {
+  .about-container .paragraph {
+    padding: 30px;
   }
-  main .slideShow img {
-    height: 70vw;
-    width: 50vw;
+  
+  .about-container .image-holder {
+    padding: 30px;
   }
 }
+
+
+
 @media (max-width: 1100px) {
-  main {
-    grid-template-columns: 1fr;
+  .about-container {
+    grid-template-columns: auto;
   }
-  main .overOns {
-    grid-column: span 1;
+  .about-container .paragraph {
+    padding: 30px;
   }
-  main .overOns #Slider {
-    position: relative;
-    display: block;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(../Img/retriever.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
-  main .overOns #Slider .Description {
-    height: 30rem;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    overflow-x: scroll;
-  }
-  main .overOns #Slider .Description div {
-    display: block;
+  
+  .about-container .image-holder {
+    padding: 30px;
     text-align: center;
-    width: 100vw;
   }
-  main .overOns #Slider .Description p,
-  main .overOns #Slider .Description .adopteer {
-    padding: 2.5rem;
-    font-size: 1.5rem;
+
+  .about-container img {
+    width: 100%;
+    max-width: 700px;
   }
-  main .overOns #Slider .Description .adopteer {
-    flex-direction: column;
-    padding-right: 7.5rem;
-    height: 100%;
-  }
-  main .overOns #Slider .Description .adopteer a {
-    margin: 1.5rem 0;
-    box-shadow: none;
-    font-size: 1rem;
-  }
-  .slideShow {
-    display: none;
-  }
+
+  .about-us .paragraph {order: 2};
+  .about-us .image-holder {order :1};
+
 }
 @media (max-width: 800px) and (max-height: 1024) {
   #welcome {
