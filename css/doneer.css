@@ -1,106 +1,111 @@
-#mainDoneer {
-  height: 80vh;
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 100%), url("../Img/Pussy.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
+/*================== GENERAL ==================*/
+:root {
+  --margin-left-panel: 0 20px 0 250px;
+  --margin-right-panel: 0 250px 0 20px;
+  --margin-long-panel: 0 250px;
+}
+
+.donate-container h2 {
+  margin-bottom: 20px;
+}
+
+/*================== GRID SETTINGS ==================*/
+.main-header{grid-area: head}
+.why-donate{grid-area: info1}
+.benefits-donate{grid-area: info2}
+.received-donations{grid-area: donations}
+.donate-now{grid-area: donate}
+.image-container{grid-area: img;}
+
+
+.grid-container {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: 13rem auto;
+  grid-template-areas:
+  "head head head head"
+  "info1 info1 info2 info2"
+  "donations donations donations donations"
+  "donate donate img img";
+  grid-gap: 60px;
 }
-form {
-  grid-column: 1/4;
-  grid-row: 2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  /* justify-content: center; */
-}
-form h1 {
-  font-size: 5em;
-  margin: 1em;
-  color: #5457a6;
-  font-weight: 500;
-}
-#Goal {
-  grid-column: span 5;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#Goal h1 {
-  flex-grow: 0.5;
-  font-size: 2.5rem;
+
+/*================== MAIN HEADER ==================*/
+.donate-container .main-header {
   text-align: center;
-  font-weight: 500;
 }
-#GoalWrapper {
-  padding: 3rem 3rem;
-  display: flex;
+
+.donate-container .main-header img {
   width: 90%;
-  box-shadow: 3px 3px 10px #707070;
-  background-color: #FFF;
 }
-#TimesDonated {
-  margin: 0.5rem;
-  border-radius: 60px;
-  background-color: #5457a6;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+
+.donate-container .main-header h1 {
+  font-size: 5rem;
+  font-weight: normal;
 }
-#TimesDonated p {
-  padding: 1rem 1rem;
-  font-size: 2.75em;
+
+
+
+/*================== INFORMATION ==================*/
+.donate-container .why-donate {
+  margin: var(--margin-left-panel)
 }
-#TimesDonated div {
-  flex-grow: 1;
-  flex-shrink: 0;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+
+.donate-container .benefits-donate {
+  margin: var(--margin-right-panel)
 }
-#Donations {
-  grid-column: 4/6;
-  grid-row: 2;
+
+
+
+/*================== RECEIVED DONATIONS ==================*/
+.donate-container .received-donations {
+  margin: var(--margin-long-panel)
 }
-#Donations li {
-  padding: 0 2rem;
-  border-radius: 60px;
-  margin-bottom: 1rem;
-  display: grid;
-  grid-template-columns: 5rem auto 4rem;
-  gap: 3rem;
-  background-color: #f1e6d1;
+
+.donate-container .block {
+  display: inline-block;
+  background-color: #F4F4F4;
+  width: 130px;
+  height: 100px;
 }
-#Donations li > p {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+.donate-container .block p {
   text-align: center;
 }
-#Donations li img {
-  height: 5em;
+
+.donate-container .block {
+  margin: 10px 10px;
+}
+
+.donate-container .block-wrapper div:first-of-type {
+  background-color: #5457A6;
+  color: #fff;
+  font-weight: 900;
+}
+
+.donate-container .block-wrapper div:nth-of-type(2) {
+  background-color: #EEBB56;
+  font-weight: 900;
+}
+
+.donate-container .block p:first-of-type {
+  margin-top: 20px;
+}
+
+.donate-container .block p:last-of-type {
   position: relative;
-  top: 0.45rem;
+  top: 25%;
 }
-#Donations li .donationAmount,
-#TimesDonated h2 {
-  background-color: #eebb55;
-  min-width: 4em;
-  height: 4em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  font-size: 1.5rem;
+
+.donate-container #new-donator {
+  display: none;
 }
+
 #Progressbar {
   flex-grow: 1;
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
+  margin-top: 30px;
 }
 #Progressbar .bar {
   height: 2rem;
@@ -114,170 +119,108 @@ form h1 {
   width: 63%;
 }
 #Progressbar #Progress .bar {
-  background-color: green;
+  background-color: #5457A6;
 }
 #Progressbar #MainGoal {
   width: 37%;
 }
 #Progressbar #MainGoal .bar {
-  background-color: hotpink;
+  background-color: #EEBB56;
 }
-/* End Test Phasing */
-.preItemDoneer {
-  display: none;
+
+
+/*================== DONATE NOW ==================*/
+.donate-container .donate-now {
+  margin: var(--margin-left-panel)
 }
-.preMainDoneer {
+
+form {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  min-width: 100vw;
-  height: 80vh;
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 100%), url("../Img/Pussy.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
+  flex-direction: column;
 }
-#GoBack,
-#GoBackMobile {
-  display: none;
+
+form input {
+  width: 12rem;
+} 
+
+/* image on the side */
+.image-container {
+  margin: var(--margin-right-panel)
 }
-@media (max-width: 1000px) {
-  #mainDoneer {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: auto auto;
-    gap: 0.25rem 0px;
-  }
-  form {
-    grid-column: 1/3;
-  }
-  #Donations {
-    grid-column: 3/6;
-  }
-  #GoalWrapper {
-    align-self: start;
-    flex-direction: column;
-    gap: 1rem;
-    width: 100%;
-    padding: 1rem 3rem;
-  }
-  #Progressbar {
-    align-self: center;
-    width: 80%;
+
+.image-container img {
+  width: 100%;
+}
+
+/*================== RESPONSIVE ==================*/
+@media (max-width: 1450px) {
+  :root {
+      --margin-left-panel: 0 20px 0 150px;
+      --margin-right-panel: 0 150px 0 20px;
+      --margin-long-panel: 0 150px;
   }
 }
-@media (max-width: 600px) {
-  #mainDoneer {
-    grid-template-columns: 1fr;
-    grid-template-rows: 20vh 60vh auto;
+
+@media (max-width: 1200px) {
+  .grid-container {
+      grid-template-areas:
+      "head head head head"
+      "info1 info1 info2 info2"
+      "donations donations donations donations"
+      "donate donate donate donate"
+      "img img img img";
   }
-  #mainDoneer form {
-    display: none;
+
+  :root {
+      --margin-left-panel: 0 5px 0 80px;
+      --margin-right-panel: 0 80px 0 5px;
+      --margin-long-panel: 0 80px;
   }
-  #mainDoneer #TimesDonated p {
-    font-size: 1em;
+
+  .image-container {
+      margin: 0;
   }
-  #mainDoneer #Donations {
-    grid-column: 1;
-  }
-  #mainDoneer #Donations li {
-    padding: 0 2rem;
-    border-radius: 60px;
-    margin-bottom: 1rem;
-    display: grid;
-    grid-template-columns: calc(3rem / 2) 1fr 3rem;
-    gap: 3rem;
-    background-color: #f1e6d1;
-  }
-  #mainDoneer #Donations li > p {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-  #mainDoneer #Donations li img {
-    height: 3rem;
-    align-self: center;
-  }
-  #mainDoneer #GoalWrapper {
-    padding: 0px;
-    grid-column: 1;
-  }
-  #mainDoneer #GoalWrapper h1 {
-    font-size: 1em;
-  }
-  #mainDoneer #GoBack {
-    align-self: center;
-    justify-self: center;
-    text-align: center;
-    display: block;
-    margin: 2rem;
-    padding: 1rem;
-    background-color: #eebb55;
-    border-radius: 20rem;
-    color: #FFF;
-  }
+
+  form input {
+      width: 30rem;
+  } 
 }
-@media (max-height: 560px) and (orientation: landscape) {
-  #mainDoneer {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto 1fr;
+
+@media (max-width: 800px) {
+  :root {
+      --margin-left-panel: 0 20px 0 20px;
+      --margin-long-panel: 0 20px;
   }
-  #mainDoneer form {
-    display: none;
+
+  .grid-container {
+      grid-template-areas:
+      "head head head head"
+      "info1 info1 info1 info1"
+      "info2 info2 info2 info2"
+      "donations donations donations donations"
+      "donate donate donate donate"
+      "img img img img";
   }
-  #mainDoneer #Donations {
-    grid-column: span 2;
-    grid-row: span 2;
+
+  .donate-container .benefits-donate {
+      margin: var(--margin-left-panel)
   }
-  #mainDoneer #Donations * {
-    font-size: 1em;
+
+  .donate-container .main-header h1 {
+      font-size: 3.5rem;
+      font-weight: normal;
   }
-  #mainDoneer #Donations ul {
-    grid-column: 2;
-    grid-row: 2/3;
-  }
-  #mainDoneer #Donations li {
-    padding: 0 2rem;
-    border-radius: 60px;
-    margin-bottom: 1rem;
-    display: grid;
-    grid-template-columns: calc(3rem / 2) 1fr 3rem;
-    gap: 3rem;
-    background-color: #f1e6d1;
-  }
-  #mainDoneer #Donations li > p {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-  #mainDoneer #Donations li img {
-    height: 3rem;
-    align-self: center;
-  }
-  #mainDoneer #GoalWrapper {
-    padding: 0px;
-    grid-column: 1;
-    grid-row: 1;
-  }
-  #mainDoneer #GoalWrapper h1 {
-    font-size: 1em;
-  }
-  #mainDoneer #GoBack {
-    align-self: center;
-    justify-self: center;
-    text-align: center;
-    display: block;
-    margin: 2rem;
-    padding: 1rem;
-    background-color: #eebb55;
-    border-radius: 20rem;
-    color: #FFF;
-  }
+
+  
 }
-@media (max-width: 560px) {
-  form h1 {
-    text-align: center;
-    font-size: 3em;
+
+@media (max-width: 650px) {
+  form input {
+      width: 12rem;
+  } 
+
+  .donate-container {
+      text-align: center;
   }
+
 }

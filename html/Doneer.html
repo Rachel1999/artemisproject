@@ -22,7 +22,7 @@
             </a>
 
             <h1 id="PageTitle">
-                Home
+                Doneer
             </h1>
 
             <ul id="NavMenu">
@@ -55,125 +55,83 @@
 
         </nav>
         <div id="ClearFix"></div>
-        <main class="preMainDoneer"> 
-            
-            <form id="formDoneer">
-                <h1>
-                    Doneer Nu
-                </h1>
-                <h3>
-                    Bedrag
-                </h3>
-                <input type="number" name="Bedrag" required="required"></input>
-                <h3>
-                    Naam
-                </h3>
-                <input type="text" name="Naam" required="required"></input>
-                <h3>
-                    E-mail
-                </h3>
-                <input type="text" name="E-mail" required="required"></input>
-
-				<input type="button" onclick="doneerSubmit()" value="Doneer">
-            </form>
-
-            <div class="preItemDoneer">
-                <div id="GoalWrapper">
-                    <h1>
-                        Dank u wel voor uw donatie
-                    </h1>
-                    <div id="Progressbar">
-                        <div id="Progress">
-                            <div class="bar"></div>
-                            <p>
-                                315
-                            </p>
-                        </div>
-                        <div id="MainGoal">
-                            <div class="bar"></div>
-                            <p>
-                                500
-                            </p>
-                        </div>
-                    </div>
-                </div>
+        <main class="donate-container grid-container"> 
+            <div class="main-header" id="head">
+                <h1>Doneer nu</h1>
+                <img src="../Img/Doneer/donate.jpg">
             </div>
-
-            <section class="preItemDoneer">
-                <div id="TimesDonated">
-                    <p>
-                        Ontvangen Donaties
-                    </p>
-                    <div class="amount">
-                        <h2>
-                            5
-                        </h2>
+            <div class="why-donate item" id="why-donate">
+                <h2>Waarom doneren</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac pulvinar magna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum quis neque ac ligula consequat commodo ac eu odio. In hac habitasse platea dictumst. Nam non mi blandit, condimentum arcu eget. Vestibulum quis neque ac ligula consequat commodo ac eu odio. In hac habitasse platea dictumst. Nam non mi blandit, condimentum arcu eget. Vestibulum quis neque ac ligula consequat commodo ac eu odio. In hac habitasse platea dictumst. Nam non mi blandit, condimentum arcu eget.
+                </p>
+            </div>
+            <div class="benefits-donate info item" id="benefits-donate">
+                <h2>Voordelen</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac pulvinar magna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum quis neque ac ligula consequat commodo ac eu odio. In hac habitasse platea dictumst. Nam non mi blandit, condimentum arcu eget. Vestibulum quis neque ac ligula consequat commodo ac eu odio. In hac habitasse platea dictumst. Nam non mi blandit, condimentum arcu eget. Vestibulum quis neque ac ligula consequat commodo ac eu odio. In hac habitasse platea dictumst. Nam non mi blandit, condimentum arcu eget.
+                </p>
+            </div>
+            <div class="received-donations info item preItemDoneer">
+                <div class="block-container">
+                    <div class="block-wrapper" id="append">
+                        <h2>Ontvangen donaties (<span id="total-donations"></span>)</h2>
+                        <div class="block">
+                            <p>Totaal:</p>
+                            <p id="total-amount">€290,-</p>
+                        </div>
+                        <div class="block">
+                            <p id="goal">Doel:</p>
+                            <p>€500,-</p>
+                        </div>
+                        <div class="block">
+                            <p>€25,-</p>
+                            <p>Aart Staartjes</p>
+                        </div>
+                        <div class="block">
+                            <p>€50,-</p>
+                            <p>Mark Rutte</p>
+                        </div>
+                        <div class="block">
+                            <p>€75,-</p>
+                            <p>Hugo de Jonge</p>
+                        </div>
+                        <div class="block">
+                            <p>€150,-</p>
+                            <p>Jesse Klaver</p>
+                        </div>
+                        <div class="block" id="new-donator">
+                            <p id="€">3</p>
+                            <p id="donator">3</p>
+                        </div>
                     </div>
                 </div>
 
-                <ul id="Donators">
-                    <li>
-                        <Img src="../Img/Doneer/kisspng-dog-paw-bear-clip-art-dog-paw-clipart-5aaa1b82172204.5185983915210976020948.png" alt="Poot van een hond">
-                        <p>
-                            
-                        </p>
-                        <div class="donationAmount">
-                            <p>
-                                €15,-
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <Img src="../Img/Doneer/kisspng-dog-paw-bear-clip-art-dog-paw-clipart-5aaa1b82172204.5185983915210976020948.png" alt="Poot van een hond">
-                        <p>
-                            Aart Staartjes
-                        </p>
-                        <div class="donationAmount">
-                            <p>
-                                €25,-
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <Img src="../Img/Doneer/kisspng-dog-paw-bear-clip-art-dog-paw-clipart-5aaa1b82172204.5185983915210976020948.png" alt="Poot van een hond">
-                        <p>
-                            Mark Rutte
-                        </p>
-                        <div class="donationAmount">
-                            <p>
-                                €50,-
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <Img src="../Img/Doneer/kisspng-dog-paw-bear-clip-art-dog-paw-clipart-5aaa1b82172204.5185983915210976020948.png" alt="Poot van een hond">
-                        <p>
-                            Hugo de Jonge
-                        </p>
-                        <div class="donationAmount">
-                            <p>
-                                €75,-
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <Img src="../Img/Doneer/kisspng-dog-paw-bear-clip-art-dog-paw-clipart-5aaa1b82172204.5185983915210976020948.png" alt="Poot van een hond">
-                        <p>
-                            Jesse Klaver 
-                        </p>
-                        <div class="donationAmount">
-                            <p>
-                                €150,-
-                            </p>
-                        </div>
-                    </li>
-                </ul>
-
-                <div id="GoBack">
-                    Terug naar donatie venster
-                </div>     
-            </section>
-
+            </div>
+            <div class="donate-now" id="donate-now">
+                <h2 id="text">Doneer nu!</h2>
+                <form id="formDoneer">
+                    <div>
+                        <h3>Bedrag</h3>
+                        <input type="number" name="Bedrag" id="amount" required="required"></input>
+                    </div>
+                    <div>
+                        <h3>Naam</h3>
+                        <input type="text" name="Naam" id="name" required="required"></input>
+                    </div>
+                    <div>
+                        <h3>E-mail</h3>
+                        <input type="text" name="E-mail" id="email" required="required"></input>
+                    </div>
+    
+                    <div>
+                        <input type="button" onclick="donateNow()" value="Doneer">
+                    </div>
+                </form>
+            </div>
+            <div class="image-container">
+                <img src="../Img/Doneer/pet-store.jpg">
+            </div>
         </main>
     </body>
 </html>
