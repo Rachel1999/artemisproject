@@ -38,7 +38,6 @@
   color: black;
 }
 
-
 /*==================== NEWS SPOTLIGHT ====================*/
 .spotlight-container img {
   padding: 10px 0;
@@ -99,12 +98,12 @@
   text-align: right;
 }
 
+/*==================== RESPONSIVE ====================*/
 @media (max-width: 1350px) {
   .recent-container .left-side {
     width: 200px;
   }
 }
-
 
 @media (max-width: 1100px) {
   .news-container {
@@ -118,6 +117,7 @@
   }
 
 }
+
 @media (max-width: 530px) {
   .recent-container .left-side {
     float: none;
@@ -125,9 +125,5 @@
 
   .img-wrapper {
     text-align: left;
-  }
-
-  .article {
-    
   }
 }
