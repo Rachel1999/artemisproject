@@ -1,86 +1,44 @@
-var hasDonated = false;
+var donations = [15, 50, 75, 150]; // current donations
 
-function doneerSubmit()
-{
+function totalDonations() {
+    donation_count = Object.keys(donations).length;
+    document.getElementById("total-donations").innerHTML = donation_count;
+} totalDonations()
 
-    // "Pop-Up" nieuwe elementen na dat je een keer op de knop doneer drukt.
-   if(!hasDonated) {
-        // Add Id en verwijder Class
-        document.getElementsByClassName('preItemDoneer')[1].id = "Donations";
-        document.getElementById('Donations').classList.remove("preItemDoneer")
-        // Add Id en verwijder Class
-        document.getElementsByClassName('preItemDoneer')[0].id = "Goal";
-        document.getElementById('Goal').classList.remove("preItemDoneer")
-        // Add Id en verwijder Class
-        document.getElementsByClassName('preMainDoneer')[0].id = "mainDoneer";
-        document.getElementById('mainDoneer').classList.remove("preMainDoneer")
-
-        //Setting other HTML elemtns like forms
-        document.querySelector("#formDoneer>h1").style.display = "none";
-        document.querySelector("form").style.justifyContent = "center"
-   }
+/* Donate button */
+function donateNow() {
+    input_value = document.getElementById("amount").value;
+    donator_name = document.getElementById("name").value;
+    email = document.getElementById("email").value;
 
 
-    // Get values van de form
-    let form = document.getElementById('formDoneer');
-    let naam = form.elements['Naam'].value.length > 0 ? form.elements['Naam'].value : "Anoniem";
-    let bedrag = Number(form.elements['Bedrag'].value) ?? 0;
-
-    // Als gedoneerd heeft, geen naam veranderen, anders zet er een naam neer
-    if(!hasDonated) document.getElementById('Donators').querySelector("li").querySelector("p").innerHTML = naam;
-
-    // Zet hasDonated naar true zodat de naam niet meer veranderd.
-    hasDonated = true;
-
-    // Pak donatievalue en zorg er voor dat het een Number wordt.
-    var donationAmount = document.getElementsByClassName("donationAmount")[0].querySelector("p").innerHTML;
-    var ParsedDonationAmount = parseFloat(donationAmount.split("€")[1]);
-    var totaleBedrag = ParsedDonationAmount + bedrag;
-    // Update het bedrag
-    document.getElementsByClassName("donationAmount")[0].querySelector("p").innerHTML = `€${totaleBedrag},-`;
-
-    var DonationAmountTotal = 0;
-
-    // Pak nieuwe donatievalue
-    for (var i = 0; i < 5; i++)
-    {
-        DonationAmountTotal = DonationAmountTotal + parseFloat(document.getElementsByClassName("donationAmount")[i].querySelector("p").innerHTML.split("€")[1]);
+    if(donator_name === "") {
+        donator_name = "Anoniem";
     }
 
-    // Update de goal balk
-    let a = DonationAmountTotal;
-    let b = 500 // Dit is het nummer voor de goal
-    let c = a/b;
-    let d = c*100;
-    
-    if(d > 100) d = 100; // Niet over 100% gaan 
+    if(input_value === "") {
+        alert("Vul een bedrag in");
+    } 
+    else {
+        donations.push(input_value);
 
-    // Verander de Width van de 2 bar elementen.
-    document.getElementById('Progress').style.width = d + "%";
-    
-    document.getElementById('MainGoal').style.width = 100-d + "%";
-    document.getElementById('Progress').querySelector("p").innerHTML = DonationAmountTotal;
+        var sum = donations.reduce(function(a, b){
+            return +a + +b;
+        }, 0);
+        document.getElementById("total-amount").innerHTML = "€" + sum + ",-";
 
-    var previousAmount = Number(document.getElementsByClassName('amount')[0].querySelector("h2").innerHTML);
-    document.getElementsByClassName('amount')[0].querySelector("h2").innerHTML = previousAmount+1;
+        // Change goal block if goal has been reached
+        if(sum >= 500) {
+            document.getElementById("goal").innerHTML = "DOEL BEREIKT!";
+        }
 
-    //Reset form for Go Back
-    document.querySelector("#GoBack").onclick = (() => {
+        document.getElementById("text").innerHTML = "Bedankt voor uw donatie!"
+        document.getElementById("formDoneer").style.display = "none";
 
-        // Add Id en verwijder Class
-        document.getElementById('Goal').classList.add("preItemDoneer")
-        document.getElementsByClassName('preItemDoneer')[0].id = "-";
-        // Add Id en verwijder Class
-        document.getElementById('Donations').classList.add("preItemDoneer")
-        document.getElementsByClassName('preItemDoneer')[1].id = "-";
-        // Add Id en verwijder Class
-        document.getElementById('mainDoneer').classList.add("preMainDoneer")
-        document.getElementsByClassName('preMainDoneer')[0].id = "-";
+        document.getElementById("new-donator").style.display = "inline-block";
+        document.getElementById("€").innerHTML = "€" + input_value + ",-";
+        document.getElementById("donator").innerHTML = donator_name;
 
-        //Setting other HTML elemtns like forms
-        document.querySelector("#formDoneer>h1").style.display = "block";
-        document.querySelector("form").style.justifyContent = "center";
-
-        hasDonated = false;
-    });
+        totalDonations()
+    }
 }
