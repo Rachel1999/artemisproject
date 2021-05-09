@@ -57,47 +57,57 @@
         <div id="ClearFix"></div>
         <!-- <Img id="Pussy" src="../Img/Pussy.jpg" alt="Pussy"></Img> -->
         <main id="mainContact">
-            <form id="formContact">                
+            <form id="formContact"> 
+                <div class="contact-info">
+                    <div class="content">
+                        <h2>Contact</h2>
+                        
+                    </div>
+                </div>               
                 <div id="MainInput">
-                    <h3>
-                        Aanhef
-                    </h3>
-                    <input type="text" required></input>
-                    <h3>
-                        Naam
-                    </h3>
-                    <input type="text" required></input>
-                    <h3>
-                        E-mail
-                    </h3>
-                    <input type="email" required></input>
-                    <h3>
-                        TelefoonNummer
-                    </h3>
-                    <input type="tel" required></input>
+                    <div class="content">
+                        <div>
+                            <h3 class="one">Aanhef <span>*</span></h3>
+                            <input class="one-one" type="text" required></input>
+                        </div>
+                        <div>
+                            <h3 class="one"> Naam <span>*</span></h3>
+                            <input class="one-one" type="text" required></input>
+                        </div>
+                        <div>
+                            <h3>E-mail <span>*</span></h3>
+                            <input type="email" required></input>
+                        </div>
+                        <div>
+                            <h3>TelefoonNummer <span>*</span></h3>
+                            <input type="tel" required></input>
+                        </div>
+    
+                        <div id="Questions">
+                            <h3>Vraag/Opmerking <span>*</span></h3>
+                            <textarea id="Question" type="text"></textarea>
+                        </div>
+    
+                        <div id="SubAndSend">
+    
+                            <div id="checkboxWrapper">
+                                <input type="checkbox" id="nieuwsbrief">
+                                    <label for="nieuwsbrief" type="text">  
+                                        Aanmelden voor nieuwsbrief    
+                                    </label>     
+                                </input>
+                            </div>    
+                                            
+                            <input class="sentForm" id="send" type="submit" readonly="readonly" value="Verstuur"></input>
+                        </div>
+                    </div> 
                 </div>
                 
-                <div id="Questions">
-                    <h3>
-                        Vraag/Opmerking
-                    </h3>
-                    <textarea id="Question" type="text"></textarea>
-                </div>
             <!-- End of form wrapper -->
-            
-                <div id="SubAndSend">
-
-                    <div id="checkboxWrapper">
-                        <input type="checkbox" id="nieuwsbrief">
-                            <label for="nieuwsbrief" type="text">  
-                                Aanmelden voor nieuwsbrief    
-                            </label>     
-                        </input>
-                    </div>    
-                                    
-                    <input class="sentForm" id="send" type="submit" readonly="readonly" value="Verstuur"></input>
-                </div>
             </form>
+            <div class="contact-img-container">
+                <img src="../Img/contact/1.svg">
+            </div>
         </main>
     </body>
 </html>
