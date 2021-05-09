@@ -1,66 +1,87 @@
-#mainContact {
-  height: 80vh;
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.6) 100%), url("../Img/Pussy.jpg");
+
+body {
+  /* background-image: url("../Img/contact/1.svg");
   background-repeat: no-repeat;
-  background-position: center;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
-  align-items: center;
+  background-position: right;
+  background-size: 877px; */
 }
+
 #mainContact #formContact {
-  width: 500px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: auto auto;
-  gap: 1rem 5rem;
+  background-color: #fff;
+  height: auto;
+  margin: 50px 50px;
 }
+
+
 #mainContact #formContact #Question {
-  min-height: 16rem;
-  grid-column: 2;
-  padding: 1rem;
+  height: 100px;
 }
-#mainContact #formContact #SubAndSend {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  grid-row: 2;
-  grid-column: span 2;
-}
-#mainContact #formContact #SubAndSend #checkboxWrapper {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 1em;
-  flex-wrap: nowrap;
-}
+
 #mainContact #formContact #SubAndSend #checkboxWrapper input[type="checkbox"] {
   width: 20px;
 }
-@media (max-width: 750px) and (orientation: landscape) {
-  #mainContact #formContact {
-    width: auto;
-    gap: 2rem;
-    display: flex;
-    grid-template-columns: repeat(3, 1fr);
-  }
-  #mainContact #formContact #Questions {
-    padding: 0px;
-  }
-  #mainContact #formContact #SubAndSend {
-    justify-content: center;
-    align-content: center;
-  }
+
+#mainContact {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+
 }
-@media (max-width: 510px) {
-  #mainContact {
-    padding: 2rem 0;
+
+.contact-img-container {
+  width: 85%;
+  height: 85%;
+}
+
+#MainInput {
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 1px 3px 6px #888888;
+}
+
+.contact-info {
+  background-color: #5457A6;
+  height: auto;
+}
+
+.contact-info h2, p {
+  color: #fff;
+  padding-bottom: 20px;
+}
+
+.content {
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 20px;
+}
+
+form span {
+  color: #ff0000
+}
+
+.location-info {
+  margin-top: 50px;
+}
+
+.location-info span {
+  color: #fff;
+  font-weight: 900;
+}
+
+@media (max-width: 1400px) {
+  .contact-img-container {
+    width: 100%;
   }
-  #mainContact #formContact {
-    display: flex;
-    flex-direction: column;
+} 
+
+@media (max-width: 900px) {
+  #mainContact {
+    grid-template-columns: 1fr; 
+  }
+
+  .contact-img-container {
     text-align: center;
   }
-}
+  .contact-img-container img {
+    width: 70%;
+  }
+} 
