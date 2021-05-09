@@ -3,7 +3,7 @@
 */
 
 // Wanneer pagina geladen is, zet timeout voor de donate animation en bekijk welke soort menu je nodig hebt
-window.onload = setTimeout(BTNDonateAnimation, 1500);
+window.onload = setTimeout(BTNDonateAnimation, 0);
 
 // Voor resize van je browser (mobiel/browser testen) bekijk welke soort menu je nodig hebt
 window.onresize = (() => { BTNDonateAnimation() });
