@@ -1,9 +1,7 @@
-
-body {
-  /* background-image: url("../Img/contact/1.svg");
-  background-repeat: no-repeat;
-  background-position: right;
-  background-size: 877px; */
+/*================== CONTACT FORM ==================*/
+#mainContact {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
 }
 
 #mainContact #formContact {
@@ -12,61 +10,42 @@ body {
   margin: 50px 50px;
 }
 
-
-#mainContact #formContact #Question {
-  height: 100px;
-}
-
-#mainContact #formContact #SubAndSend #checkboxWrapper input[type="checkbox"] {
-  width: 20px;
-}
-
-#mainContact {
-  display: grid;
-  grid-template-columns: 1fr 1fr; 
-
-}
-
-.contact-img-container {
-  width: 85%;
-  height: 85%;
-}
-
 #MainInput {
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   box-shadow: 1px 3px 6px #888888;
 }
 
+#mainContact #formContact #Question {
+  height: 100px;
+}
+
+/*================== BANNER ==================*/
 .contact-info {
   background-color: #5457A6;
   height: auto;
 }
 
-.contact-info h2, p {
+.contact-info h2{
   color: #fff;
   padding-bottom: 20px;
 }
 
 .content {
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-top: 20px;
+  padding: 20px 30px 0 30px;
 }
 
 form span {
   color: #ff0000
 }
 
-.location-info {
-  margin-top: 50px;
+/*================== SIDE IMAGE ==================*/
+.contact-img-container {
+  width: 85%;
+  height: 85%;
 }
 
-.location-info span {
-  color: #fff;
-  font-weight: 900;
-}
-
+/*================== RESPONSIVE ==================*/
 @media (max-width: 1400px) {
   .contact-img-container {
     width: 100%;
@@ -81,6 +60,7 @@ form span {
   .contact-img-container {
     text-align: center;
   }
+
   .contact-img-container img {
     width: 70%;
   }
