@@ -1,3 +1,4 @@
+/*================== GENERAL ==================*/
 @font-face {
   font-family: "Quicksand";
   src: url(../fonts/Quicksand-VariableFont_wght.ttf);
@@ -8,14 +9,12 @@
   margin: 0;
   box-sizing: border-box;
   font-family: 'Quicksand';
-  /* overflow-x: hidden;  disabled */
   text-decoration: none;
 }
 #PleuresEisenDieNiemandWiltLaatMijLekkerNesten .extendMe {
   opacity: 0;
 }
 #PleuresEisenDieNiemandWiltLaatMijLekkerNesten .HierHebJeJeMixin {
-  font-family: "Helvetica";
   padding: 0.5rem 3rem;
   border-radius: 30px;
   background-color: #eebb55;
@@ -38,9 +37,14 @@ html,
 body {
   min-height: 100vh;
   scroll-behavior: smooth;
-  /* overflow-y: visible; disabled */
-  overflow-x: hidden; /* vervanging */
+  overflow-x: hidden;
 }
+
+#ClearFix {
+  margin-top: 8rem;
+}
+
+/*================== NAVIGATION ==================*/
 nav {
   position: fixed;
   z-index: 20;
@@ -91,6 +95,12 @@ nav .doneer {
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
+
+.current-page, nav ul li a:hover {
+  border-bottom: 4px solid #eebb55;
+}
+
+/*================== NAVIGATION MOBILE/TABLET ==================*/
 nav #HamburgerMenu {
   display: none;
   justify-self: flex-end;
@@ -113,13 +123,7 @@ nav #PageTitle {
   font-size: 3em;
 }
 
-.current-page, nav ul li a:hover {
-  border-bottom: 4px solid #eebb55;
-}
-
-#ClearFix {
-  margin-top: 8rem;
-}
+/*================== RESPONSIVE ==================*/
 @media (max-width: 1100px) {
   nav {
     grid-template-columns: 4rem 1fr 4rem;
@@ -154,24 +158,4 @@ nav #PageTitle {
   nav #PageTitle {
     font-size: 2.75em;
   }
-}
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-.fadeIn {
-  -webkit-animation-name: fadeIn;
-  animation-name: fadeIn;
 }
